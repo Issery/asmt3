@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rxl9090</title>
+</head>
+<h1 align="left">Name: Ruidong Li</h1>
+<h1 align="left">Student ID: 1001889090</h1>
+
+<form action={{url_for("search")}} method="post">
+    {{ form.evala.label }}{{ form.Attribute }}<br>
+    {{ form.cpr.label }} {{ form.cpr }} {{ form.attr_value.label }} {{ form.attr_value }}
+    {{ form.submit }}<br>
+</form>
+
+<body>
+    <hr>
+    <table border="1">
+        <tr>
+            {% for attr in df.columns %}
+                <td>{{attr}}</td>
+            {% endfor %}
+        </tr>>
+        <tr>
+            {% for volvano in volcanos %}
+            <tr>
+                <td>{{volvano.number}}</td>
+                <td>{{volvano.name}}</td>
+                <td>{{volvano.country}}</td>
+                <td>{{volvano.region}}</td>
+                <td>{{volvano.latitude}}</td>
+                <td>{{volvano.longitude}}</td>
+                <td>{{volvano.elev}}</td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table> <br>
+</body>
+</html>

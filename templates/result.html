@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <hr>
+    <table border="1">
+        <tr>
+            {% for attr in df.columns %}
+                <td>{{attr}}</td>
+            {% endfor %}
+        </tr>>
+        <tr>
+            {% for volcano in res %}
+            <tr>
+                <td>{{volvano.number}}</td>
+                <td>{{volvano.name}}</td>
+                <td>{{volvano.country}}</td>
+                <td>{{volvano.region}}</td>
+                <td>{{volvano.latitude}}</td>
+                <td>{{volvano.longitude}}</td>
+                <td>{{volvano.elev}}</td>
+            </tr>
+            {% endfor %}
+        </tr>
+    </table>
+</body>
+</html>
